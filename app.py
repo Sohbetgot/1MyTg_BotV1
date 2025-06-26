@@ -38,7 +38,7 @@ def start(message):
 
 @bot.message_handler(func=lambda m: m.text == "Bot goş")
 def bot_add_choose_type(message):
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True, resize_keyboard=True)
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
     for key, name in bot_types.items():
         markup.add(f"{key}. {name}")
     bot.send_message(message.chat.id, "Haýsy boty goşmak isleýärsiňiz? Sanawy saýlaň:", reply_markup=markup)
